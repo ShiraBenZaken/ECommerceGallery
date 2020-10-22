@@ -1,0 +1,22 @@
+{
+  "name": "ecommercegallery",
+  "version": "1.0.0",
+  "description": "react &amp; nodejs gallery shop. hope it will work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShiraBenZaken/ECommerceGallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShiraBenZaken/ECommerceGallery/issues"
+  },
+  "homepage": "https://github.com/ShiraBenZaken/ECommerceGallery#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
