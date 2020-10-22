@@ -25,19 +25,19 @@ function App() {
           <Link to='/'>ARTIB</Link>
         </div>
         <div className="header-links">
-          <a href="cart.html">Cart  |</a>
-          <a href="signin.html">|   Sign In</a>
+          <a href="cart.html">התחבר  |</a>
+          <a href="signin.html">|   עגלה</a>
       </div>
     </header>
     <aside className="sidebar">
-      <h3>Shopping Categories</h3>
+      <h3>סוג התמונה</h3>
       <button className="sidebar-close-button" onClick={closeMenu}>x</button>
       <ul>
         <li>
-          <a href="index.html">oil</a>
+          <a href="index.html">שמן</a>
         </li>
         <li>
-          <a href="index.html">blabla</a>
+          <a href="index.html">אקריליק</a>
         </li>
       </ul>
     </aside>

@@ -1,19 +1,19 @@
 export default {
     products:[{
         _id:'123',
-        name: 'house',
-        category:'oil',
+        name: 'ארמון',
+        category:'שמן',
         image: "./images/house.jpg",
         price:'1000$',
-        brand:'nice house'
+        brand:'תמונה מהממת'
     },
     {
         _id:'111',
-        name: 'house1111',
-        category:'acrilic1111',
+        name: 'בית קטן',
+        category:'אקריליק',
         image: './images/house.jpg',
         price:'1500$',
-        brand:'nice nice nice'
+        brand:'משהו משהו'
     }
 ]
 }

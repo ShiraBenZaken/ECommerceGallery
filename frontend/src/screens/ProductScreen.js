@@ -8,8 +8,8 @@ function ProductScreen (props){
     const product= data.products.find(x=>x._id === props.match.params.id)
 
     return <div className="">
-        <div className="">
-            <Link to='/'>Back to HomePage</Link>
+        <div className="back-to-result">
+            <Link to='/'>חזרה</Link>
         </div>
         <div className="details">
             <div className="details-image">
@@ -38,7 +38,7 @@ function ProductScreen (props){
                         סטטוס: {product.status}
                     </li>
                     <li>
-                        <button>הוסף לעגלה</button>
+                        <button className="button">הוסף לעגלה</button>
                     </li>
 
                 </ul>
