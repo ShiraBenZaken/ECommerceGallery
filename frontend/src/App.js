@@ -1,7 +1,9 @@
 import React from 'react';
 import data from './date';
 import './App.css';
-
+import {BrowserRouter,Route} from 'react-router-dom'
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 
 function App() {
   const openMenu = () => {
@@ -12,9 +14,8 @@ function App() {
   }
 
 
-
-
   return (
+    <BrowserRouter>
     <div className="grid-container">
       <header className="header">
         <div className="brand">
@@ -42,6 +43,8 @@ function App() {
     </aside>
     <main className="main">
       <div className="content">
+        <Route path="/products/:id" component={ProductScreen} />
+        <Route path="/" exact={true} component={HomeScreen} />
         <ul className="products">
           {
             data.products.map(product =>
@@ -64,6 +67,7 @@ function App() {
       all right reserved
     </footer>
   </div>
+  </BrowserRouter>
   );
 }
 
