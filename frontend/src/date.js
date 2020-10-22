@@ -3,7 +3,7 @@ export default {
         _id:'123',
         name: 'house',
         category:'oil',
-        image: './images/house.jpg',
+        image: "./images/house.jpg",
         price:'1000$',
         brand:'nice house'
     },
