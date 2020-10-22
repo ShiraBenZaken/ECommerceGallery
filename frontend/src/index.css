@@ -11,6 +11,10 @@ body
     margin: 0;
 }
 
+#root{
+    height: 100%;
+}
+
 .grid-container
 {
     display: grid;
