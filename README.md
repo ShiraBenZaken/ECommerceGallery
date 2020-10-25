@@ -1,2 +1,2 @@
 # ECommerceGallery
-react &amp; nodejs gallery shop. hope it will work
+react &amp; nodejs &amp; mongoDb gallery shop. hope it will work
