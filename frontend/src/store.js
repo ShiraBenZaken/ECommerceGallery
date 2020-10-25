@@ -1,4 +1,4 @@
-import {createStore, combineReducers, compose, applyMiddleware,compose } from 'redux';
+import {createStore, combineReducers, compose, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import { productListReducer } from './reducer/productReducers';
 
