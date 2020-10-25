@@ -233,4 +233,7 @@ a:hover
     border: .1rem  rgb(26, 27, 17) solid;
 }
 
+html.rtl {
+    direction: rtl;
+  }
 
