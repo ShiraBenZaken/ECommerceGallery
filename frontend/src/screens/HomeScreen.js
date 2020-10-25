@@ -12,14 +12,16 @@ function HometScreen (props){
   const dispatch = useDispatch();
   
   useEffect(()=>{
-    dispatch(listProducts);
+    dispatch(listProducts());
 
     return ()=> {
       //
     };
   }, [])
 
-    return <ul className="products">
+    return loading? <div>loading...</div>:
+    error? <div>{error}</div>:
+    <ul className="products">
               {
                 products.map(product =>
                     <li key={product._id}>
