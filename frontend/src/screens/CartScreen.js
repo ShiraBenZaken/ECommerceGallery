@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react';
 import {useSelector,  useDispatch } from 'react-redux';  
-import { addToCart } from "../action/cartAction";
-
+import { addToCart, removeFromCart } from "../action/cartAction";
+import { Link } from 'react-router-dom';
 
 function CartScreen(props){
     const cart= useSelector(state => state.cart);
-    const {cartItem} =cart;
+    const {cartItems} =cart;
     const productId =props.match.params.id;
     const dispatch = useDispatch();
+    const removeFromCartHandler =(productId)=>{
+        dispatch(removeFromCart(productId));
+    }
 
     useEffect(()=>{
         if(productId){
@@ -29,21 +32,30 @@ function CartScreen(props){
                     </div>
                 </li>
                 {
-                    cartItem.length ===0 ?
+                    cartItems.length ===0?
                     <div>
                         העגלה ריקה
                     </div>
                     :
-                    cartItem.map(item =>
-                        <div>
+                    cartItems.map(item =>
+                    <li>
+                        <div className="cart-image">
                             <img src={item.image} alt="product"></img>
-                            <div className="cart-name">
-                                <div>
-                                    {item.name}
-                                </div> 
-                            </div>
-                            {item.price}
                         </div>
+                        <div className="cart-name">
+                            <div>
+                                <Link to={"/product/" + item.product }>
+                                    {item.name}
+                                </Link>
+                            </div> 
+                            <button type="button" className="button" onClick={() => removeFromCartHandler(item.product)}>
+                                הסרת תמונה
+                            </button>
+                        </div> 
+                        <div className="cart-price">
+                            ${item.price}
+                        </div> 
+                    </li>
                     )
                 }
             </ul>
@@ -52,9 +64,9 @@ function CartScreen(props){
             <h3>
                 מחיר כללי 
                 :
-                ${cartItem.reduce((a,c) => a+c.price,0)}
+                ${cartItems.reduce((a,c) => a+c.price,0)}
             </h3>  
-            <button className="button primary" disabled={cartItem.length === 0}>
+            <button className="button primary" disabled={cartItems.length === 0}>
             התקדם לקופה    
             </button>  
         </div>
