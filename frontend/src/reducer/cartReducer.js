@@ -12,6 +12,8 @@ function cartReducer(state={cartItem:[]},action){
                 };
             }
             return {cartItem:[...state.cartItem,item]}
+            default:
+                return state;
     }
 }
 
