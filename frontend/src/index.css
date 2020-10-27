@@ -195,7 +195,7 @@ a:hover
       flex: 1 1 30rem;
       border: 0.1rem #808080 solid;
       border-radius: 0.5rem;
-      background-color: #fcffcc;
+      background-color: #f8f8f8;
       padding: 1rem;
 
   }
@@ -237,3 +237,33 @@ html.rtl {
     direction: rtl;
   }
 
+
+/* cart */
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    align-items: flex-start;
+}
+
+.cart-list {
+    flex:3 1 60rem ;
+}
+.cart-action {
+    flex: 1 1 20rem;
+    background-color: #f8f8f8;
+    border: .1rem #808080 ;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.cart-list-container {
+    padding: 0;
+    list-style-type: none;
+}
+
+.cart-list-container li:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+  

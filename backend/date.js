@@ -4,7 +4,7 @@ export default {
         name: 'ארמון',
         category:'שמן',
         image: "./images/house.jpg",
-        price:'1000$',
+        price:1000,
         brand:'תמונה מהממת'
     },
     {
@@ -12,7 +12,7 @@ export default {
         name: 'בית קטן',
         category:'אקריליק',
         image: './images/house.jpg',
-        price:'1500$',
+        price:1500,
         brand:'משהו משהו'
     }
 ]

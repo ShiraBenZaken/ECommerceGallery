@@ -48,7 +48,15 @@ function CartScreen(props){
                 }
             </ul>
         </div>
-        <div className="catr-action">
+        <div className="cart-action">
+            <h3>
+                מחיר כללי 
+                :
+                ${cartItem.reduce((a,c) => a+c.price,0)}
+            </h3>  
+            <button className="button primary" disabled={cartItem.length === 0}>
+            התקדם לקופה    
+            </button>  
         </div>
     </div>
 }
