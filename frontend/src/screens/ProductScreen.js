@@ -17,11 +17,15 @@ function ProductScreen (props){
             console.log("work")
             // 
         };
-        }, [])
+    }, []);
+
+    const handleAddToCart = () =>{
+        props.history.push("/cart/" + props.match.params.id);
+    }
 
     return <div className="">
         <div className="back-to-result">
-            <Link to='/'>חזרה</Link>
+            <Link to="/">חזרה</Link>
         </div>
         {loading? <div>Loading</div>:
         error? <div> {error}</div>:
@@ -53,7 +57,7 @@ function ProductScreen (props){
                         סטטוס: {product.status}
                     </li>
                     <li>
-                        <button className="button">הוסף לעגלה</button>
+                        <button onClick={handleAddToCart} className="button">הוסף לעגלה</button>
                     </li>
 
                 </ul>

@@ -15,9 +15,13 @@ function CartScreen(props){
     useEffect(()=>{
         if(productId){
             dispatch(addToCart(productId));
-           // dispatch(addToCart(props.match.params.id));
         }
     }, []);
+
+    const checkOutHandler=() =>{
+        props.history.push("/signin?reirect=shipping");
+    };
+    
 
 
     return <div className="cart">
@@ -66,7 +70,7 @@ function CartScreen(props){
                 :
                 ${cartItems.reduce((a,c) => a+c.price,0)}
             </h3>  
-            <button className="button primary" disabled={cartItems.length === 0}>
+            <button onClick={checkOutHandler} className="button primary full-width" disabled={cartItems.length === 0}>
             התקדם לקופה    
             </button>  
         </div>

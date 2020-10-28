@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,7 +23,7 @@ function HometScreen (props){
     (
     <ul className="products">
       {
-        products.map(product =>
+        products.map((product) =>(
         <li key={product._id}>
           <div className="product">
             <Link to={'/product/' + product._id}>
@@ -36,7 +36,7 @@ function HometScreen (props){
               <div className="product-price">{product.price}</div>
           </div>
         </li>)
-      }
+        )}
     </ul>
     )
 }
