@@ -27,7 +27,7 @@ function HometScreen (props){
         <li key={product._id}>
           <div className="product">
             <Link to={'/product/' + product._id}>
-            <img className="product-image" src={product.image} alt="products"></img>
+            <img className="product-image" src={product.image} alt="product"></img>
             </Link>
               <div className="product-name" >
                 <Link to={'/product/' + product._id}>{product.name}</Link>
